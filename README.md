@@ -14,7 +14,7 @@ This repository documents a comprehensive **System Security Audit** performed on
 ## Audit Methodology & Findings
 
 ### 1. Identity & Access Management (IAM)
-**Status:** ❌ Critical Risk Identified  
+**Status:**  Critical Risk Identified  
 **Finding:** During the audit of the `Sign-in Options`, it was discovered that the primary administrative account had **no password protection**.
 
 * **Vulnerability:** Without a password, the system lacks a basic "front door," allowing any physical user to bypass security and access sensitive data.
@@ -27,7 +27,7 @@ This repository documents a comprehensive **System Security Audit** performed on
 ---
 
 ### 2. Operating System Lifecycle & Patch Management
-**Status:** ❌ High Risk Identified  
+**Status:**  High Risk Identified  
 **Finding:** The Windows Update center indicates the current OS build has reached **End of Support (EoS)**.
 
 * **Vulnerability:** EoS systems no longer receive "Patch Tuesday" updates or critical security fixes from Microsoft. This leaves the system open to known exploits that will never be patched.
@@ -40,7 +40,7 @@ This repository documents a comprehensive **System Security Audit** performed on
 
 
 ### 3. Endpoint Protection (Antivirus)
-**Status:** ✅ Secure  
+**Status:** Secure  
 **Finding:** Microsoft Defender is fully operational. A manual `Quick Scan` was performed to verify the integrity of the filesystem.
 
 * **Metrics:** 12,579 files scanned in 20 seconds.
@@ -53,7 +53,7 @@ This repository documents a comprehensive **System Security Audit** performed on
 ---
 
 ### 4. Network Firewall Configuration
-**Status:** ✅ Secure  
+**Status:**  Secure  
 **Finding:** The Windows Defender Firewall is actively filtering traffic across all three network profiles (Domain, Private, and Public).
 
 * **Security Posture:** All incoming connections are blocked by default unless explicitly allowed. This prevents unauthorized network probing.
@@ -65,7 +65,7 @@ This repository documents a comprehensive **System Security Audit** performed on
 ---
 
 ### 5. Software Inventory & Attack Surface Review
-**Status:** ✅ Managed  
+**Status:** Managed  
 **Finding:** A review of the `Programs and Features` list was conducted to ensure only authorized development tools are installed.
 
 * **Approved Toolchain:** Git, Python 3.14, Node.js, Oracle VirtualBox, and VS Code.
